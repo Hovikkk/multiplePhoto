@@ -1,0 +1,34 @@
+﻿<ion-view view-title="Gallery" hide-nav-bar="true" can-swipe-back="false">
+    <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear ion-navicon" ng-click="openMenu()"></button>
+    </ion-nav-buttons>
+    <ion-content class="padding" scroll="false">
+        <div class="container text-center" id="container">
+            <div style="color:white">
+                <p>image quantity: {{quantityImg}}</p>
+                <p>image print quantity: {{printQuantity}}</p>
+                <div ng-if="countInfoItems1 != 0" class="costInfo">
+                    <p>10 / 15  -  amount:  {{countInfoItems1}} </p>
+                    <p>1 image cost: 80</p>
+                    <p>common cost: {{costCountInfoItems1}}</p>
+                </div>
+                <div ng-if="countInfoItems2 != 0" class="costInfo">
+                    <p>13 / 18  -  amount:  {{countInfoItems2}}</p>
+                    <p>1 image cost: 110</p>
+                    <p>common cost: {{costCountInfoItems2}})</p>
+                </div>
+                <div ng-if="countInfoItems3 != 0" class="costInfo">
+                    <p>15 / 21  -  amount:  {{countInfoItems3}} </p>
+                    <p>1 image cost: 170</p>
+                    <p>common cost: {{costCountInfoItems3}}</p>
+                </div>
+                <div ng-if="countInfoItems4 != 0" class="costInfo">
+                    <p>20 / 30  -  amount:  {{countInfoItems4}}</p>
+                    <p>1 image cost: 630</p>
+                    <p>common cost: {{costCountInfoItems4}}</p>
+                </div>
+                <div class="costInfo commonCost">Total cost: {{totalCost}}</div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,33 @@
+﻿<ion-view view-title="Home" hide-nav-bar="true" data-ng-init="init()" can-swipe-back="false" >
+    <ion-content class="padding" scroll="false">
+        <div class="container text-center" id="container">
+            <div class="row imgActive">
+                <a ng-click="myImage()" class="homePageBotton rulesButton vcenter col-xs-12"></a>
+            </div>
+            <button class="button button-block button-balanced" ng-click="facebook()" ng-show="fbLogin">
+                <p>log in</p>
+            </button>
+           <!-- <button class="button button-block button-balanced" ng-click="photoFb()">
+                fb photo
+            </button>
+            <button class="button button-block button-balanced" ng-click="statusFb()">
+                fb status
+            </button>-->
+
+            <div class="bg" ng-show="chooseSource">
+                <div class="popupFoto">
+                    <div class="popupFotoDiv">
+                        <div class="divGallery">
+                            <a ng-click="selImages()" class="galleryButton vcenter"></a>
+                            <span style="color:#959595">From Gallary</span>
+                        </div>
+                        <div ng-click="goToGallery()" class="goToGallery">
+
+                        </div>
+                    </div>
+                </div>
+                <a id="closebutton" class="closeButton" ng-click="closePopup()"></a>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

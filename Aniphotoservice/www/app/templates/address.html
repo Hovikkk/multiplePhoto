@@ -1,0 +1,37 @@
+﻿<ion-view view-title="Gallery" hide-nav-bar="true" can-swipe-back="false">
+    <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear ion-navicon" ng-click="openMenu()"></button>
+    </ion-nav-buttons>
+    <ion-content class="padding" scroll="false">
+        <div class="container text-center" id="container" style="color:white">
+           <!-- <input type="text" ng-model="nameUser"/> -->
+            <ng-form name="myForm">
+                <label class="item item-input">
+                    <span class="input-label">Username</span>
+                    <input type="text" ng-class="{ 'inputNull': inputNameNull}" ng-model="userdata.name" ng-change="fin()">
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">Telephone</span>
+                    <input type="tel" ng-model="userdata.phone" ng-pattern="phoneNumbr" placeholder="+374..." ng-class="{ 'inputNull': phoneError}" ng-change="fin()">
+                    <!--<span class="error" ng-show="myForm.userdata.phone.$error.required">Required!</span>
+                    <span class="error" ng-show="myForm.userdata.phone.$error.minlength">Phone no not less that 11 char.</span>
+                    <span class="error" ng-show="myForm.userdata.phone.$error.maxlength">Phone no not more than 12 char.</span>-->
+                </label>
+                <ion-list>
+                    <ion-radio ng-model="userdata.optionSelect" class="radioButton radioButtonLeft" ng-value="'parcel'" ng-change="fin()">parcel</ion-radio>
+                    <ion-radio ng-model="userdata.optionSelect" class="radioButton" ng-value="'store'" ng-change="fin()">take store</ion-radio>
+                </ion-list>
+                <select ng-change="region(userdata.state)" ng-model="userdata.state">
+                    <option ng-selected="{{operator.value == userdata.state}}" ng-repeat="operator in operators" value="{{operator.value}}">{{operator.displayName}}</option>
+                </select>
+                <label class="item item-input">
+                    <span class="input-label">address</span>
+                    <input type="text" ng-model="userdata.address" ng-change="fin()">
+                </label>
+                <button class="button button-block button-balanced" ng-click="userInfo()">
+                    user info
+                </button>
+            </ng-form>
+        </div>
+    </ion-content>
+</ion-view>

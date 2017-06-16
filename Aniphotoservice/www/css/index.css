@@ -1,0 +1,485 @@
+* {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+body {
+    -webkit-touch-callout: none;
+    -webkit-text-size-adjust: none;
+    -webkit-user-select: none;
+    background-color: #E4E4E4;
+    background-image: linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
+    background-image: -webkit-linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
+    background-image: -ms-linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
+    background-image: -webkit-gradient( linear, left top, left bottom, color-stop(0, #A7A7A7), color-stop(0.51, #E4E4E4) );
+    background-attachment: fixed;
+    font-family: 'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    text-transform: uppercase;
+    width: 100%;
+    background-color: #32383d;
+    font-family: 'RobotoRegular', 'Droid Sans', 'Segoe UI', Segoe, 'San Francisco', 'Helvetica Neue', Helvetica, Arial, Geneva, sans-serif;
+    font-size: 12px;
+}
+
+.app {
+    background: url(../images/cordova.png) no-repeat center top;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    height: 50px;
+    width: 225px;
+    text-align: center;
+    padding: 180px 0px 0px 0px;
+    margin: -115px 0px 0px -112px;
+}
+
+@media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
+    .app {
+        background-position: left center;
+        padding: 75px 0px 75px 170px;
+        margin: -90px 0px 0px -198px;
+    }
+}
+
+h1 {
+    font-size: 24px;
+    font-weight: normal;
+    margin: 0px;
+    overflow: visible;
+    padding: 0px;
+    text-align: center;
+}
+
+.event {
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    color: #FFFFFF;
+    font-size: 12px;
+    margin: 0px 30px;
+    padding: 2px 0px;
+}
+
+    .event.listening {
+        background-color: #333333;
+        display: block;
+    }
+
+    .event.received {
+        background-color: #4B946A;
+        display: none;
+    }
+
+@keyframes fade {
+    from {
+        opacity: 1.0;
+    }
+
+    50% {
+        opacity: 0.4;
+    }
+
+    to {
+        opacity: 1.0;
+    }
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: 1.0;
+    }
+
+    50% {
+        opacity: 0.4;
+    }
+
+    to {
+        opacity: 1.0;
+    }
+}
+
+.blink {
+    animation: fade 3000ms infinite;
+    -webkit-animation: fade 3000ms infinite;
+}
+
+
+
+body {
+    background-size: 100% !important;
+    position: absolute;
+    padding: 0 !important;
+    z-index: 1;
+}
+
+.vcenter {
+    margin: 0 auto;
+}
+#container {
+    padding-right: 0px;
+    padding-left: 0px;
+}
+.ionBlock .pane {
+    width: 100vw;
+    height: 100vh;
+    background-image: url('../images/BG_game.png');
+    background-size: 100% 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 6;
+}
+.ionBlock .padding {
+    padding: 0
+}
+.homePageImg {
+    width: 25%;
+    height: 7vh;
+    position:absolute;
+    bottom:0;
+    z-index:7
+}
+.imgActive a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 8vw;
+}
+.buttonHome {
+    background: #fdc689;
+    left:0
+}
+.buttonGallery {
+    background: red;
+    left: 25%;
+}
+.buttonAbout {
+    background: blue;
+    left: 50%;
+}
+.buttonHistory {
+    background: green;
+    left: 75%
+}
+.infoPhoto{
+    color:#fff;
+    width:80vw;
+    height:30vw;
+    text-align:center;
+}
+.rulesButton {
+    background: #ffa542;
+    border-radius: 43px;
+    border: 4px solid #acd373;
+    margin-right: 10vw;
+    margin-left: 10vw;
+}
+.homePageBotton {
+    width: 65%;
+    height: 9vh;
+    line-height: 13vw;
+    margin-left: 17.5vw;
+    margin-top: 5vh;
+}
+.bg {
+    position: absolute;
+    z-index: 55;
+    top: 0px;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background: rgba(15,15,15,0.5);
+}
+.popupFoto {
+    background-color: #fff;
+    /*background-size: 100% 100%;*/
+    width: 83%;
+    height: 47vw;
+    margin: 33vw auto;
+    border: 4px solid #acd373;
+    border-radius: 15px;
+}
+.popupFotoDiv {
+    margin: 0 auto;
+    width: 64vw;
+    height: 25vw;
+    padding-top: 13vw;
+}
+.cameraButton {
+    background: url('../images/fotoPopup/camera.png');
+    background-size: 100% 100%;
+    width: 15vw;
+    height: 15vw;
+    display: block;
+    margin-bottom: 2vw;
+    vertical-align: middle;
+}
+
+.galleryButton {
+    background: url('../images/fotoPopup/gallery.png');
+    background-size: 100% 100%;
+    width: 15vw;
+    height: 15vw;
+    display: block;
+    margin-bottom: 2vw;
+    vertical-align: middle;
+}
+#closebutton {
+    position: absolute;
+    z-index: 1;
+    top: 38vw;
+    right: 14vw;
+    width: 3vw;
+    height: 3vw;
+}
+
+.closeButton {
+    background: url('../images/fotoPopup/xButton.png');
+    background-size: 100% 100%;
+}
+.divGallery, .divCamera, .goToGallery {
+    width: 21vw;
+    float: left;
+}
+.goToGallery{
+    height: 21vw;
+    background-color:red;
+}
+.addButton {
+    background: url('../images/add.png');
+    background-size: 100% 100%;
+    width: 100px;
+    display: inline-block;
+    height: 100px;
+    float: left;
+}
+
+.cropArea {
+    background: #E4E4E4;
+    overflow: hidden;
+    width: 500px;
+    height: 350px;
+}
+img {
+    max-width: 95%; /* This rule is very important, please do not ignore this! */
+}
+.numeric{
+    right:0
+}
+.galleryOptions{
+    position: absolute;
+    top: 52px;
+}
+.leftRepeat{
+    width: 20vw;
+    height: 20vw;
+    float:left;
+}
+.rightRepeat{
+    width: 20vw;
+    height: 20vw;
+    background-color:green;
+    float:right;
+}
+.zoomAdd {
+    width: 10vw;
+    height: 10vw;
+    float: left;
+    background-color: blue;
+}
+.zoomOut {
+    width: 10vw;
+    height: 10vw;
+    float: right;
+    background-color: red;
+}
+.divButon {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: 15vw
+}
+.imageGallery{
+    margin: 0 auto;
+}
+.deleteGallerImage {
+    width: 10vw;
+    height: 10vw;
+    background: red;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 10;
+}
+.fbGallery{
+    position:absolute;
+    bottom: 20vw;
+}
+.albomImage{
+    width:20vw;
+    height:20vw;
+}
+.albomImageDiv {
+    display: inline-block;
+    float: left;
+    width: 20vw;
+}
+.bgFbAlbom {
+    position: absolute;
+    z-index: 1000000000001;
+    top: 0px;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background: rgba(15,15,15,0.5);
+}
+.popupFotoFbAlbom {
+    background-color: #fff;
+    /* background-size: 100% 100%;*/
+    width: 86%;
+    height: 53vw;
+    margin: 33vw auto;
+    border: 4px solid #acd373;
+    border-radius: 15px;
+}
+
+.popupFotoFbAlbomDiv {
+    margin: 0 auto;
+    width: 75vw;
+    height: 52vw;
+    padding-top: 3vw;
+}
+.divGalleryFbAlbom {
+    width: 100%;
+    float: left;
+}
+#closebuttonFb {
+    position: absolute;
+    z-index: 1;
+    top: 38vw;
+    right: 14vw;
+    width: 5vw;
+    height: 5vw;
+}
+
+.closeButtonFb {
+    background: url('../images/fotoPopup/xButton.png');
+    background-size: 100% 100%;
+}
+.scrolDiv {
+    width: 100%;
+    height: 37vw;
+    background: red;
+    background-size: 100% 100%;
+}
+
+.scrolDiv2 {
+    width: 95%;
+    height: 14vw;
+    padding-top: 1.7vw;
+}
+
+.scrolSize {
+    width: 95%;
+    height: 34.5vw;
+}
+.doneImgFb{
+    width:30vw;
+    height:10vw
+}
+.cancelImgFb {
+    width: 30vw;
+    height: 10vw
+}
+.loadingSpiner {
+    width: 100vw;
+    height: 100vh;
+    background-image: url('../images/BG_game.png');
+    background-size: 100% 100%;
+    vertical-align: middle;
+    display: table-cell;
+    position: absolute;
+    z-index: 1000000000000;
+    top: 0;
+}
+
+.loadingLogo {
+    width: 50vw;
+    height: 50vw;
+    position: absolute;
+    left: 25vw;
+    top: 25vh;
+}
+.photoOpacity{
+    opacity: 0.3
+}
+.bottomBar {
+    width: 100vw;
+    height: 11vw;
+    background-color: blue;
+    position: absolute;
+    bottom: 12vw;
+    z-index: 7;
+    text-align: center;
+}
+.leftButton {
+    background-color: #000;
+    width: 11vw;
+    height:11vw;
+    float:left;
+}
+.leftButtonBar {
+    background-color: #b7b7b7;
+}
+.rightButton {
+    background-color:#000;
+    width: 11vw;
+    height: 11vw;
+    float:right;
+}
+.rightButtonBar {
+    background-color: #b7b7b7;
+}
+.circleActiv {
+    width: 5vw;
+    height: 5vw;
+    border: 1px solid black;
+    display: inline-block;
+    border-radius: 27px;
+    margin:3vw;
+}
+.addActivCircle{
+    background-color: red;
+}
+.divCircle {
+    display: inline;
+}
+.costInfo {
+    width: 100vw;
+    height: 23vw;
+    /*line-height: 20vw;*/
+    border: 2px solid green;
+    margin-top: 3vw;
+}
+.commonCost{
+    border: 2px solid red;
+    line-height: 20vw;
+}
+.costInfo p{
+    margin: 0;
+    padding: 0;
+}
+.radioButton{
+    width: 49vw;
+}
+.radioButtonLeft{
+    float:left
+}
+.inputNull {
+    border:1px solid red !important;
+}
+.error {
+    color: red;
+}
